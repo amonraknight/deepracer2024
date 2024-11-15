@@ -32,3 +32,7 @@ Env, action domain and hyperparameters:
 Result:
 
 ![result](./models/lsh-vcar-2018-20241114-1/pics/result.png)
+
+Evaluation:
+
+![Eavluation](./models/lsh-vcar-2018-20241114-1/pics/evaluation.png)
