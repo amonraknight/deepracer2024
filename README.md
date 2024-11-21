@@ -40,7 +40,6 @@ Evaluation:
 
 ## FalkTanOptimizedTrack-reinvent2018-20241121-1
 
-
 [Reward function](./models/FalkTanOptimizedTrack-reinvent2018-20241121-1/reward_funciton.py)
 
 Env, action domain and hyperparameters:
@@ -52,5 +51,17 @@ Result:
 ![result](./models/FalkTanOptimizedTrack-reinvent2018-20241121-1/pics/result%20chart.png)
 
 
+## FalkTanOptimizedTrack-reinvent2018-20241121-2 (Clone from FalkTanOptimizedTrack-reinvent2018-20241121-1)
+
+[Reward function](./models/FalkTanOptimizedTrack-reinvent2018-20241121-2/reward_funciton.py)
+
+
+Env, action domain and hyperparameters:
+
+![env_action_hyperparameter](./models/FalkTanOptimizedTrack-reinvent2018-20241121-2/pics/env_actions_hyperparameters.png)
+
+Result:
+
+![result](./models/FalkTanOptimizedTrack-reinvent2018-20241121-2/pics/result%20chart.png)
 
 
