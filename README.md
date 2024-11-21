@@ -65,3 +65,29 @@ Result:
 ![result](./models/FalkTanOptimizedTrack-reinvent2018-20241121-2/pics/result%20chart.png)
 
 
+## FalkTanOptimizedTrack-reinvent2018-20241121-3 (Clone from FalkTanOptimizedTrack-reinvent2018-20241121-2)
+
+[Reward function](./models/FalkTanOptimizedTrack-reinvent2018-20241121-3/reward_funciton.py)
+
+
+Env, action domain and hyperparameters:
+
+![env_action_hyperparameter](./models/FalkTanOptimizedTrack-reinvent2018-20241121-3/pics/env_actions_hyperparameters.png)
+
+Result:
+
+![result](./models/FalkTanOptimizedTrack-reinvent2018-20241121-3/pics/result%20chart.png)
+
+
+## FalkTanOptimizedTrack-reinvent2018-20241121-4 (Clone from FalkTanOptimizedTrack-reinvent2018-20241121-3)
+
+[Reward function](./models/FalkTanOptimizedTrack-reinvent2018-20241121-4/reward_funciton.py)
+
+
+Env, action domain and hyperparameters:
+
+![env_action_hyperparameter](./models/FalkTanOptimizedTrack-reinvent2018-20241121-4/pics/env_actions_hyperparameters.png)
+
+Result:
+
+![result](./models/FalkTanOptimizedTrack-reinvent2018-20241121-4/pics/result%20chart.png)
