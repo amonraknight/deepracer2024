@@ -49,10 +49,8 @@ Env, action domain and hyperparameters:
 
 Result:
 
-![result](./models/FalkTanOptimizedTrack-reinvent2018-20241121-1/pics/result.png)
+![result](./models/FalkTanOptimizedTrack-reinvent2018-20241121-1/pics/result%20chart.png)
 
-Evaluation:
 
-![Eavluation](./models/FalkTanOptimizedTrack-reinvent2018-20241121-1/pics/evaluation.png)
 
 
