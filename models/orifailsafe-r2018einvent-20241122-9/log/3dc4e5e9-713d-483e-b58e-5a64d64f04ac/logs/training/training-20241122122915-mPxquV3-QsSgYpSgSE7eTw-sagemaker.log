@@ -1,0 +1,233 @@
+Writing training job pid to /opt/ml/training_worker.pid: 46
+Training Worker Args: Namespace(aws_region='us-east-1', checkpoint_dir='./checkpoint_sagemaker', environment_s3_key=None, framework='tensorflow', model_metadata_s3_key='s3://aws-deepracer-data-us-east-1-1/data-0665b171-b710-4e0d-b076-f5f91435d945/models/3dc4e5e9-713d-483e-b58e-5a64d64f04ac/model_metadata.json', preset_s3_key=None, pretrained_checkpoint_dir='./pretrained_checkpoint_sagemaker', pretrained_s3_bucket='aws-deepracer-data-us-east-1-1', pretrained_s3_prefix='data-0665b171-b710-4e0d-b076-f5f91435d945/models/74a5e90e-5475-4554-ac44-b25ee0cb88e6/sagemaker-robomaker-artifacts/', s3_bucket='aws-deepracer-data-us-east-1-1', s3_prefix='data-0665b171-b710-4e0d-b076-f5f91435d945/models/3dc4e5e9-713d-483e-b58e-5a64d64f04ac/sagemaker-robomaker-artifacts/')
+[s3] Successfully downloaded model metadata                  from s3 key data-0665b171-b710-4e0d-b076-f5f91435d945/models/3dc4e5e9-713d-483e-b58e-5a64d64f04ac/model_metadata.json to local ./custom_files/agent/model_metadata.json.
+Sensor list ['FRONT_FACING_CAMERA'], network DEEP_CONVOLUTIONAL_NETWORK_SHALLOW, simapp_version 5.0, training_algorithm clipped_ppo, action_space_type discrete lidar_config {'num_sectors': 8, 'num_values_per_sector': 8, 'clipping_dist': 2.0}
+Action space from file: [{'steering_angle': -18, 'speed': 1.4, 'index': 0}, {'steering_angle': -18, 'speed': 2.9, 'index': 1}, {'steering_angle': -8, 'speed': 1.6, 'index': 2}, {'steering_angle': -8, 'speed': 3.1, 'index': 3}, {'steering_angle': -5, 'speed': 1.8, 'index': 4}, {'steering_angle': -5, 'speed': 3.3, 'index': 5}, {'steering_angle': 0, 'speed': 2, 'index': 6}, {'steering_angle': 0, 'speed': 3.5, 'index': 7}, {'steering_angle': 4, 'speed': 1.9, 'index': 8}, {'steering_angle': 4, 'speed': 3.4, 'index': 9}, {'steering_angle': 7.5, 'speed': 1.7, 'index': 10}, {'steering_angle': 7.5, 'speed': 3.2, 'index': 11}, {'steering_angle': 15, 'speed': 1.5, 'index': 12}, {'steering_angle': 15, 'speed': 3, 'index': 13}, {'steering_angle': 30, 'speed': 1, 'index': 14}, {'steering_angle': 30, 'speed': 1.3, 'index': 15}]
+Using the following hyper-parameters
+{
+  "batch_size": 64,
+  "beta_entropy": 0.002,
+  "discount_factor": 0.99,
+  "e_greedy_value": 1.0,
+  "epsilon_steps": 10000,
+  "exploration_type": "categorical",
+  "loss_type": "huber",
+  "lr": 0.0003,
+  "num_episodes_between_training": 20,
+  "num_epochs": 10,
+  "stack_size": 1,
+  "term_cond_avg_score": 100000.0,
+  "term_cond_max_episodes": 100000
+}
+[s3] Successfully uploaded hyperparameters to                  s3 bucket aws-deepracer-data-us-east-1-1 with s3 key data-0665b171-b710-4e0d-b076-f5f91435d945/models/3dc4e5e9-713d-483e-b58e-5a64d64f04ac/sagemaker-robomaker-artifacts/ip/hyperparameters.json.
+Hostname: ip-10-0-25-161.ec2.internal
+[s3] Successfully uploaded ip address to                  s3 bucket aws-deepracer-data-us-east-1-1 with s3 key data-0665b171-b710-4e0d-b076-f5f91435d945/models/3dc4e5e9-713d-483e-b58e-5a64d64f04ac/sagemaker-robomaker-artifacts/ip/ip.json.
+[s3] Successfully uploaded ip done to                  s3 bucket aws-deepracer-data-us-east-1-1 with s3 key data-0665b171-b710-4e0d-b076-f5f91435d945/models/3dc4e5e9-713d-483e-b58e-5a64d64f04ac/sagemaker-robomaker-artifacts/ip/done.
+[s3] Successfully downloaded deepracer checkpoint json from                  s3 key data-0665b171-b710-4e0d-b076-f5f91435d945/models/74a5e90e-5475-4554-ac44-b25ee0cb88e6/sagemaker-robomaker-artifacts/model/deepracer_checkpoints.json to local pretrained_checkpoint_sagemaker/agent/deepracer_checkpoints.json.
+[s3] Successfully uploaded temp coach checkpoint to                   s3 bucket aws-deepracer-data-us-east-1-1 with s3 key data-0665b171-b710-4e0d-b076-f5f91435d945/models/74a5e90e-5475-4554-ac44-b25ee0cb88e6/sagemaker-robomaker-artifacts/model/.coach_checkpoint.
+[s3] Successfully downloaded 61_Step-0.ckpt.data-00000-of-00001 from                  s3 key data-0665b171-b710-4e0d-b076-f5f91435d945/models/74a5e90e-5475-4554-ac44-b25ee0cb88e6/sagemaker-robomaker-artifacts/model/61_Step-0.ckpt.data-00000-of-00001 to local pretrained_checkpoint_sagemaker/agent/61_Step-0.ckpt.data-00000-of-00001.
+[s3] Successfully downloaded 61_Step-0.ckpt.index from                  s3 key data-0665b171-b710-4e0d-b076-f5f91435d945/models/74a5e90e-5475-4554-ac44-b25ee0cb88e6/sagemaker-robomaker-artifacts/model/61_Step-0.ckpt.index to local pretrained_checkpoint_sagemaker/agent/61_Step-0.ckpt.index.
+[s3] Successfully downloaded 61_Step-0.ckpt.meta from                  s3 key data-0665b171-b710-4e0d-b076-f5f91435d945/models/74a5e90e-5475-4554-ac44-b25ee0cb88e6/sagemaker-robomaker-artifacts/model/61_Step-0.ckpt.meta to local pretrained_checkpoint_sagemaker/agent/61_Step-0.ckpt.meta.
+[s3] Successfully downloaded .ready from                  s3 key data-0665b171-b710-4e0d-b076-f5f91435d945/models/74a5e90e-5475-4554-ac44-b25ee0cb88e6/sagemaker-robomaker-artifacts/model/.ready to local pretrained_checkpoint_sagemaker/agent/.ready.
+## Creating graph - name: MultiAgentGraphManager
+## Start physics before creating graph
+## Create graph
+## Creating agent - name: agent
+[RL] Created agent loggers
+[RL] Dynamic import of memory:  "DeepRacerMemoryParameters" {
+    "load_memory_from_file_path": null,
+    "max_size": [
+        "<MemoryGranularity.Transitions: 0>",
+        1000000
+    ],
+    "n_step": -1,
+    "shared_memory": false,
+    "train_to_eval_ratio": 1
+}
+[RL] Dynamically imported of memory <markov.memories.deepracer_memory.DeepRacerMemory object at 0x7f1f4605cfa0>
+[RL] Setting devices
+[RL] Setting filters
+[RL] Setting filter devices: numpy
+[RL] Setting Phase
+[RL] After setting Phase
+[RL] Setting signals
+[RL] Agent init successful
+[RL] ActorCriticAgent init
+[RL] ActorCriticAgent  init successful
+## Created agent: agent
+/root/anaconda/envs/sagemaker_env/lib/python3.8/site-packages/rl_coach/architectures/tensorflow_components/layers.py:119: UserWarning: `tf.layers.conv2d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv2D` instead.
+  return tf.compat.v1.layers.conv2d(input_layer, filters=self.num_filters, kernel_size=self.kernel_size,
+/root/anaconda/envs/sagemaker_env/lib/python3.8/site-packages/rl_coach/architectures/tensorflow_components/layers.py:181: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  return tf.compat.v1.layers.dense(input_layer, self.units, name=name, kernel_initializer=kernel_initializer,
+/root/anaconda/envs/sagemaker_env/lib/python3.8/site-packages/rl_coach/architectures/tensorflow_components/layers.py:181: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  return tf.compat.v1.layers.dense(input_layer, self.units, name=name, kernel_initializer=kernel_initializer,
+/root/anaconda/envs/sagemaker_env/lib/python3.8/site-packages/rl_coach/architectures/tensorflow_components/layers.py:119: UserWarning: `tf.layers.conv2d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv2D` instead.
+  return tf.compat.v1.layers.conv2d(input_layer, filters=self.num_filters, kernel_size=self.kernel_size,
+## Stop physics after creating graph
+## Creating session
+Checkpoint> Restoring from path=./pretrained_checkpoint_sagemaker/agent/61_Step-0.ckpt
+Checkpoint> Saving in path=['./checkpoint_sagemaker/agent/62_Step-0.ckpt']
+[s3] Successfully uploaded .lock to                      s3 bucket aws-deepracer-data-us-east-1-1 with s3 key data-0665b171-b710-4e0d-b076-f5f91435d945/models/3dc4e5e9-713d-483e-b58e-5a64d64f04ac/sagemaker-robomaker-artifacts/model/.lock.
+Uploaded 3 files for checkpoint 62
+[s3] Successfully uploaded coach checkpoint to                   s3 bucket aws-deepracer-data-us-east-1-1 with s3 key data-0665b171-b710-4e0d-b076-f5f91435d945/models/3dc4e5e9-713d-483e-b58e-5a64d64f04ac/sagemaker-robomaker-artifacts/model/.coach_checkpoint.
+Unable to find deepracer checkpoint json
+Unable to find the best deepracer checkpoint number. Getting the last checkpoint number
+Unable to find deepracer checkpoint json
+Unable to find the last deepracer checkpoint number.
+Unable to find deepracer checkpoint json
+Unable to find the last deepracer checkpoint number.
+saved intermediate frozen graph: data-0665b171-b710-4e0d-b076-f5f91435d945/models/3dc4e5e9-713d-483e-b58e-5a64d64f04ac/sagemaker-robomaker-artifacts/model/model_62.pb
+Best checkpoint number: -1, Last checkpoint number: -1
+Copying the frozen checkpoint from ./frozen_models/agent/model_62.pb to /opt/ml/model/agent/model.pb.
+Unable to find deepracer checkpoint json
+[s3] Successfully uploaded .lock to                      s3 bucket aws-deepracer-data-us-east-1-1 with s3 key data-0665b171-b710-4e0d-b076-f5f91435d945/models/3dc4e5e9-713d-483e-b58e-5a64d64f04ac/sagemaker-robomaker-artifacts/model/.lock.
+[s3] Successfully uploaded .ready to                      s3 bucket aws-deepracer-data-us-east-1-1 with s3 key data-0665b171-b710-4e0d-b076-f5f91435d945/models/3dc4e5e9-713d-483e-b58e-5a64d64f04ac/sagemaker-robomaker-artifacts/model/.ready.
+DoorMan: installing SIGINT, SIGTERM
+Training> Name=main_level/agent, Worker=0, Episode=1, Total reward=0, Steps=94, Training iteration=0
+Training> Name=main_level/agent, Worker=0, Episode=2, Total reward=0, Steps=189, Training iteration=0
+Training> Name=main_level/agent, Worker=0, Episode=3, Total reward=0, Steps=255, Training iteration=0
+Training> Name=main_level/agent, Worker=0, Episode=4, Total reward=0, Steps=408, Training iteration=0
+Training> Name=main_level/agent, Worker=0, Episode=5, Total reward=0, Steps=562, Training iteration=0
+Training> Name=main_level/agent, Worker=0, Episode=6, Total reward=0, Steps=631, Training iteration=0
+Training> Name=main_level/agent, Worker=0, Episode=7, Total reward=0, Steps=793, Training iteration=0
+Training> Name=main_level/agent, Worker=0, Episode=8, Total reward=0, Steps=963, Training iteration=0
+Training> Name=main_level/agent, Worker=0, Episode=9, Total reward=0, Steps=1131, Training iteration=0
+Training> Name=main_level/agent, Worker=0, Episode=10, Total reward=0, Steps=1264, Training iteration=0
+Training> Name=main_level/agent, Worker=0, Episode=11, Total reward=0, Steps=1428, Training iteration=0
+Training> Name=main_level/agent, Worker=0, Episode=12, Total reward=0, Steps=1453, Training iteration=0
+Training> Name=main_level/agent, Worker=0, Episode=13, Total reward=0, Steps=1514, Training iteration=0
+Training> Name=main_level/agent, Worker=0, Episode=14, Total reward=0, Steps=1568, Training iteration=0
+Training> Name=main_level/agent, Worker=0, Episode=15, Total reward=0, Steps=1690, Training iteration=0
+Training> Name=main_level/agent, Worker=0, Episode=16, Total reward=0, Steps=1762, Training iteration=0
+Training> Name=main_level/agent, Worker=0, Episode=17, Total reward=0, Steps=1848, Training iteration=0
+Training> Name=main_level/agent, Worker=0, Episode=18, Total reward=0, Steps=2005, Training iteration=0
+Training> Name=main_level/agent, Worker=0, Episode=19, Total reward=0, Steps=2168, Training iteration=0
+Training> Name=main_level/agent, Worker=0, Episode=20, Total reward=0, Steps=2341, Training iteration=0
+Policy training> Surrogate loss=0.003035841044038534, KL divergence=0.013342129997909069, Entropy=1.4442039728164673, training epoch=0, learning_rate=0.0003
+Policy training> Surrogate loss=-0.0943678766489029, KL divergence=0.03871022164821625, Entropy=1.4364228248596191, training epoch=1, learning_rate=0.0003
+Policy training> Surrogate loss=-0.11009711772203445, KL divergence=0.04439378157258034, Entropy=1.414261817932129, training epoch=2, learning_rate=0.0003
+Policy training> Surrogate loss=-0.11579995602369308, KL divergence=0.05270613729953766, Entropy=1.384124517440796, training epoch=3, learning_rate=0.0003
+Policy training> Surrogate loss=-0.12100598216056824, KL divergence=0.05784355103969574, Entropy=1.392782211303711, training epoch=4, learning_rate=0.0003
+Policy training> Surrogate loss=-0.12231124937534332, KL divergence=0.06447214633226395, Entropy=1.3775746822357178, training epoch=5, learning_rate=0.0003
+Policy training> Surrogate loss=-0.12420044839382172, KL divergence=0.07374325394630432, Entropy=1.3706347942352295, training epoch=6, learning_rate=0.0003
+Policy training> Surrogate loss=-0.12425955384969711, KL divergence=0.07998097687959671, Entropy=1.361403465270996, training epoch=7, learning_rate=0.0003
+Policy training> Surrogate loss=-0.12882958352565765, KL divergence=0.08936364203691483, Entropy=1.3520843982696533, training epoch=8, learning_rate=0.0003
+Policy training> Surrogate loss=-0.1304294317960739, KL divergence=0.09407785534858704, Entropy=1.3583265542984009, training epoch=9, learning_rate=0.0003
+Checkpoint> Saving in path=['./checkpoint_sagemaker/agent/63_Step-2341.ckpt']
+[s3] Successfully uploaded .lock to                      s3 bucket aws-deepracer-data-us-east-1-1 with s3 key data-0665b171-b710-4e0d-b076-f5f91435d945/models/3dc4e5e9-713d-483e-b58e-5a64d64f04ac/sagemaker-robomaker-artifacts/model/.lock.
+Uploaded 3 files for checkpoint 63
+[s3] Successfully uploaded coach checkpoint to                   s3 bucket aws-deepracer-data-us-east-1-1 with s3 key data-0665b171-b710-4e0d-b076-f5f91435d945/models/3dc4e5e9-713d-483e-b58e-5a64d64f04ac/sagemaker-robomaker-artifacts/model/.coach_checkpoint.
+[s3] Successfully downloaded deepracer checkpoint json from                  s3 key data-0665b171-b710-4e0d-b076-f5f91435d945/models/3dc4e5e9-713d-483e-b58e-5a64d64f04ac/sagemaker-robomaker-artifacts/model/deepracer_checkpoints.json to local checkpoint_sagemaker/agent/deepracer_checkpoints.json.
+[s3] Successfully downloaded deepracer checkpoint json from                  s3 key data-0665b171-b710-4e0d-b076-f5f91435d945/models/3dc4e5e9-713d-483e-b58e-5a64d64f04ac/sagemaker-robomaker-artifacts/model/deepracer_checkpoints.json to local checkpoint_sagemaker/agent/deepracer_checkpoints.json.
+saved intermediate frozen graph: data-0665b171-b710-4e0d-b076-f5f91435d945/models/3dc4e5e9-713d-483e-b58e-5a64d64f04ac/sagemaker-robomaker-artifacts/model/model_63.pb
+Best checkpoint number: 62, Last checkpoint number: 62
+Copying the frozen checkpoint from ./frozen_models/agent/model_62.pb to /opt/ml/model/agent/model.pb.
+[s3] Successfully downloaded deepracer checkpoint json from                  s3 key data-0665b171-b710-4e0d-b076-f5f91435d945/models/3dc4e5e9-713d-483e-b58e-5a64d64f04ac/sagemaker-robomaker-artifacts/model/deepracer_checkpoints.json to local checkpoint_sagemaker/agent/deepracer_checkpoints.json.
+Training> Name=main_level/agent, Worker=0, Episode=21, Total reward=0, Steps=2491, Training iteration=1
+Training> Name=main_level/agent, Worker=0, Episode=22, Total reward=0, Steps=2654, Training iteration=1
+Training> Name=main_level/agent, Worker=0, Episode=23, Total reward=0, Steps=2824, Training iteration=1
+Training> Name=main_level/agent, Worker=0, Episode=24, Total reward=0, Steps=2897, Training iteration=1
+Training> Name=main_level/agent, Worker=0, Episode=25, Total reward=0, Steps=3064, Training iteration=1
+Training> Name=main_level/agent, Worker=0, Episode=26, Total reward=0, Steps=3223, Training iteration=1
+Training> Name=main_level/agent, Worker=0, Episode=27, Total reward=0, Steps=3365, Training iteration=1
+Training> Name=main_level/agent, Worker=0, Episode=28, Total reward=0, Steps=3438, Training iteration=1
+Training> Name=main_level/agent, Worker=0, Episode=29, Total reward=0, Steps=3599, Training iteration=1
+Training> Name=main_level/agent, Worker=0, Episode=30, Total reward=0, Steps=3717, Training iteration=1
+Training> Name=main_level/agent, Worker=0, Episode=31, Total reward=0, Steps=3833, Training iteration=1
+Training> Name=main_level/agent, Worker=0, Episode=32, Total reward=0, Steps=3990, Training iteration=1
+Training> Name=main_level/agent, Worker=0, Episode=33, Total reward=0, Steps=4149, Training iteration=1
+Training> Name=main_level/agent, Worker=0, Episode=34, Total reward=0, Steps=4306, Training iteration=1
+Training> Name=main_level/agent, Worker=0, Episode=35, Total reward=0, Steps=4406, Training iteration=1
+Training> Name=main_level/agent, Worker=0, Episode=36, Total reward=0, Steps=4425, Training iteration=1
+Training> Name=main_level/agent, Worker=0, Episode=37, Total reward=0, Steps=4589, Training iteration=1
+Training> Name=main_level/agent, Worker=0, Episode=38, Total reward=0, Steps=4700, Training iteration=1
+Training> Name=main_level/agent, Worker=0, Episode=39, Total reward=0, Steps=4855, Training iteration=1
+Training> Name=main_level/agent, Worker=0, Episode=40, Total reward=0, Steps=5028, Training iteration=1
+Policy training> Surrogate loss=0.02192653901875019, KL divergence=0.03692810609936714, Entropy=1.4458903074264526, training epoch=0, learning_rate=0.0003
+Policy training> Surrogate loss=-0.08083514124155045, KL divergence=0.11516257375478745, Entropy=1.3885571956634521, training epoch=1, learning_rate=0.0003
+Policy training> Surrogate loss=-0.09919945895671844, KL divergence=0.12078994512557983, Entropy=1.3455735445022583, training epoch=2, learning_rate=0.0003
+Policy training> Surrogate loss=-0.11249088495969772, KL divergence=0.12163776159286499, Entropy=1.3405888080596924, training epoch=3, learning_rate=0.0003
+Policy training> Surrogate loss=-0.1122070848941803, KL divergence=0.1238604262471199, Entropy=1.333433747291565, training epoch=4, learning_rate=0.0003
+Policy training> Surrogate loss=-0.1145261824131012, KL divergence=0.1264992356300354, Entropy=1.3456043004989624, training epoch=5, learning_rate=0.0003
+Policy training> Surrogate loss=-0.11303690820932388, KL divergence=0.13450367748737335, Entropy=1.3115605115890503, training epoch=6, learning_rate=0.0003
+Policy training> Surrogate loss=-0.12169761210680008, KL divergence=0.14228187501430511, Entropy=1.327089786529541, training epoch=7, learning_rate=0.0003
+Policy training> Surrogate loss=-0.12137451767921448, KL divergence=0.14416363835334778, Entropy=1.3103978633880615, training epoch=8, learning_rate=0.0003
+Policy training> Surrogate loss=-0.12034998834133148, KL divergence=0.14569398760795593, Entropy=1.3188756704330444, training epoch=9, learning_rate=0.0003
+Checkpoint> Saving in path=['./checkpoint_sagemaker/agent/64_Step-5028.ckpt']
+[s3] Successfully uploaded .lock to                      s3 bucket aws-deepracer-data-us-east-1-1 with s3 key data-0665b171-b710-4e0d-b076-f5f91435d945/models/3dc4e5e9-713d-483e-b58e-5a64d64f04ac/sagemaker-robomaker-artifacts/model/.lock.
+Uploaded 3 files for checkpoint 64
+[s3] Successfully uploaded coach checkpoint to                   s3 bucket aws-deepracer-data-us-east-1-1 with s3 key data-0665b171-b710-4e0d-b076-f5f91435d945/models/3dc4e5e9-713d-483e-b58e-5a64d64f04ac/sagemaker-robomaker-artifacts/model/.coach_checkpoint.
+[s3] Successfully downloaded deepracer checkpoint json from                  s3 key data-0665b171-b710-4e0d-b076-f5f91435d945/models/3dc4e5e9-713d-483e-b58e-5a64d64f04ac/sagemaker-robomaker-artifacts/model/deepracer_checkpoints.json to local checkpoint_sagemaker/agent/deepracer_checkpoints.json.
+[s3] Successfully downloaded deepracer checkpoint json from                  s3 key data-0665b171-b710-4e0d-b076-f5f91435d945/models/3dc4e5e9-713d-483e-b58e-5a64d64f04ac/sagemaker-robomaker-artifacts/model/deepracer_checkpoints.json to local checkpoint_sagemaker/agent/deepracer_checkpoints.json.
+saved intermediate frozen graph: data-0665b171-b710-4e0d-b076-f5f91435d945/models/3dc4e5e9-713d-483e-b58e-5a64d64f04ac/sagemaker-robomaker-artifacts/model/model_64.pb
+Best checkpoint number: 62, Last checkpoint number: 62
+Copying the frozen checkpoint from ./frozen_models/agent/model_62.pb to /opt/ml/model/agent/model.pb.
+[s3] Successfully downloaded deepracer checkpoint json from                  s3 key data-0665b171-b710-4e0d-b076-f5f91435d945/models/3dc4e5e9-713d-483e-b58e-5a64d64f04ac/sagemaker-robomaker-artifacts/model/deepracer_checkpoints.json to local checkpoint_sagemaker/agent/deepracer_checkpoints.json.
+Training> Name=main_level/agent, Worker=0, Episode=41, Total reward=0, Steps=5194, Training iteration=2
+Training> Name=main_level/agent, Worker=0, Episode=42, Total reward=0, Steps=5339, Training iteration=2
+Training> Name=main_level/agent, Worker=0, Episode=43, Total reward=0, Steps=5503, Training iteration=2
+Training> Name=main_level/agent, Worker=0, Episode=44, Total reward=0, Steps=5538, Training iteration=2
+Training> Name=main_level/agent, Worker=0, Episode=45, Total reward=0, Steps=5699, Training iteration=2
+Training> Name=main_level/agent, Worker=0, Episode=46, Total reward=0, Steps=5867, Training iteration=2
+Training> Name=main_level/agent, Worker=0, Episode=47, Total reward=0, Steps=5972, Training iteration=2
+Training> Name=main_level/agent, Worker=0, Episode=48, Total reward=0, Steps=6039, Training iteration=2
+Training> Name=main_level/agent, Worker=0, Episode=49, Total reward=0, Steps=6219, Training iteration=2
+Training> Name=main_level/agent, Worker=0, Episode=50, Total reward=0, Steps=6277, Training iteration=2
+Training> Name=main_level/agent, Worker=0, Episode=51, Total reward=0, Steps=6436, Training iteration=2
+Training> Name=main_level/agent, Worker=0, Episode=52, Total reward=0, Steps=6502, Training iteration=2
+Training> Name=main_level/agent, Worker=0, Episode=53, Total reward=0, Steps=6532, Training iteration=2
+Training> Name=main_level/agent, Worker=0, Episode=54, Total reward=0, Steps=6684, Training iteration=2
+Training> Name=main_level/agent, Worker=0, Episode=55, Total reward=0, Steps=6842, Training iteration=2
+Training> Name=main_level/agent, Worker=0, Episode=56, Total reward=0, Steps=6993, Training iteration=2
+Training> Name=main_level/agent, Worker=0, Episode=57, Total reward=0, Steps=7073, Training iteration=2
+Training> Name=main_level/agent, Worker=0, Episode=58, Total reward=0, Steps=7252, Training iteration=2
+Training> Name=main_level/agent, Worker=0, Episode=59, Total reward=0, Steps=7355, Training iteration=2
+Training> Name=main_level/agent, Worker=0, Episode=60, Total reward=0, Steps=7449, Training iteration=2
+Policy training> Surrogate loss=0.018990153446793556, KL divergence=0.03760230913758278, Entropy=1.4160884618759155, training epoch=0, learning_rate=0.0003
+Policy training> Surrogate loss=-0.08054305613040924, KL divergence=0.14736193418502808, Entropy=1.3291294574737549, training epoch=1, learning_rate=0.0003
+Policy training> Surrogate loss=-0.11225763708353043, KL divergence=0.15877217054367065, Entropy=1.3093502521514893, training epoch=2, learning_rate=0.0003
+Policy training> Surrogate loss=-0.11767156422138214, KL divergence=0.1631813496351242, Entropy=1.303550362586975, training epoch=3, learning_rate=0.0003
+Policy training> Surrogate loss=-0.11862611770629883, KL divergence=0.1774711310863495, Entropy=1.2739293575286865, training epoch=4, learning_rate=0.0003
+Policy training> Surrogate loss=-0.11892295628786087, KL divergence=0.18215106427669525, Entropy=1.2771251201629639, training epoch=5, learning_rate=0.0003
+Policy training> Surrogate loss=-0.12202709913253784, KL divergence=0.19247479736804962, Entropy=1.269639492034912, training epoch=6, learning_rate=0.0003
+Policy training> Surrogate loss=-0.12427353113889694, KL divergence=0.19618766009807587, Entropy=1.2548344135284424, training epoch=7, learning_rate=0.0003
+Policy training> Surrogate loss=-0.12451773881912231, KL divergence=0.2010202705860138, Entropy=1.2547414302825928, training epoch=8, learning_rate=0.0003
+Policy training> Surrogate loss=-0.1277380734682083, KL divergence=0.2032792568206787, Entropy=1.2474539279937744, training epoch=9, learning_rate=0.0003
+Checkpoint> Saving in path=['./checkpoint_sagemaker/agent/65_Step-7449.ckpt']
+[s3] Successfully uploaded .lock to                      s3 bucket aws-deepracer-data-us-east-1-1 with s3 key data-0665b171-b710-4e0d-b076-f5f91435d945/models/3dc4e5e9-713d-483e-b58e-5a64d64f04ac/sagemaker-robomaker-artifacts/model/.lock.
+Uploaded 3 files for checkpoint 65
+[s3] Successfully uploaded coach checkpoint to                   s3 bucket aws-deepracer-data-us-east-1-1 with s3 key data-0665b171-b710-4e0d-b076-f5f91435d945/models/3dc4e5e9-713d-483e-b58e-5a64d64f04ac/sagemaker-robomaker-artifacts/model/.coach_checkpoint.
+[s3] Successfully downloaded deepracer checkpoint json from                  s3 key data-0665b171-b710-4e0d-b076-f5f91435d945/models/3dc4e5e9-713d-483e-b58e-5a64d64f04ac/sagemaker-robomaker-artifacts/model/deepracer_checkpoints.json to local checkpoint_sagemaker/agent/deepracer_checkpoints.json.
+[s3] Successfully downloaded deepracer checkpoint json from                  s3 key data-0665b171-b710-4e0d-b076-f5f91435d945/models/3dc4e5e9-713d-483e-b58e-5a64d64f04ac/sagemaker-robomaker-artifacts/model/deepracer_checkpoints.json to local checkpoint_sagemaker/agent/deepracer_checkpoints.json.
+saved intermediate frozen graph: data-0665b171-b710-4e0d-b076-f5f91435d945/models/3dc4e5e9-713d-483e-b58e-5a64d64f04ac/sagemaker-robomaker-artifacts/model/model_65.pb
+Best checkpoint number: 62, Last checkpoint number: 63
+Copying the frozen checkpoint from ./frozen_models/agent/model_62.pb to /opt/ml/model/agent/model.pb.
+[s3] Successfully downloaded deepracer checkpoint json from                  s3 key data-0665b171-b710-4e0d-b076-f5f91435d945/models/3dc4e5e9-713d-483e-b58e-5a64d64f04ac/sagemaker-robomaker-artifacts/model/deepracer_checkpoints.json to local checkpoint_sagemaker/agent/deepracer_checkpoints.json.
+Training> Name=main_level/agent, Worker=0, Episode=61, Total reward=0, Steps=7616, Training iteration=3
+Training> Name=main_level/agent, Worker=0, Episode=62, Total reward=0, Steps=7647, Training iteration=3
+Training> Name=main_level/agent, Worker=0, Episode=63, Total reward=0, Steps=7808, Training iteration=3
+Training> Name=main_level/agent, Worker=0, Episode=64, Total reward=0, Steps=7975, Training iteration=3
+Training> Name=main_level/agent, Worker=0, Episode=65, Total reward=0, Steps=8007, Training iteration=3
+Training> Name=main_level/agent, Worker=0, Episode=66, Total reward=0, Steps=8086, Training iteration=3
+Training> Name=main_level/agent, Worker=0, Episode=67, Total reward=0, Steps=8133, Training iteration=3
+Training> Name=main_level/agent, Worker=0, Episode=68, Total reward=0, Steps=8296, Training iteration=3
+Training> Name=main_level/agent, Worker=0, Episode=69, Total reward=0, Steps=8460, Training iteration=3
+Training> Name=main_level/agent, Worker=0, Episode=70, Total reward=0, Steps=8602, Training iteration=3
+Training> Name=main_level/agent, Worker=0, Episode=71, Total reward=0, Steps=8762, Training iteration=3
+Training> Name=main_level/agent, Worker=0, Episode=72, Total reward=0, Steps=8798, Training iteration=3
+Training> Name=main_level/agent, Worker=0, Episode=73, Total reward=0, Steps=8960, Training iteration=3
+Training> Name=main_level/agent, Worker=0, Episode=74, Total reward=0, Steps=9120, Training iteration=3
+Training> Name=main_level/agent, Worker=0, Episode=75, Total reward=0, Steps=9268, Training iteration=3
+Training> Name=main_level/agent, Worker=0, Episode=76, Total reward=0, Steps=9388, Training iteration=3
+Training> Name=main_level/agent, Worker=0, Episode=77, Total reward=0, Steps=9458, Training iteration=3
+Training> Name=main_level/agent, Worker=0, Episode=78, Total reward=0, Steps=9584, Training iteration=3
+Training> Name=main_level/agent, Worker=0, Episode=79, Total reward=0, Steps=9748, Training iteration=3
+Training> Name=main_level/agent, Worker=0, Episode=80, Total reward=0, Steps=9928, Training iteration=3
+Policy training> Surrogate loss=0.040934063494205475, KL divergence=0.06261734664440155, Entropy=1.253623604774475, training epoch=0, learning_rate=0.0003
+Policy training> Surrogate loss=-0.06566744297742844, KL divergence=0.19189855456352234, Entropy=1.238572120666504, training epoch=1, learning_rate=0.0003
+Policy training> Surrogate loss=-0.09671120345592499, KL divergence=0.20873837172985077, Entropy=1.204329013824463, training epoch=2, learning_rate=0.0003
+Policy training> Surrogate loss=-0.10733455419540405, KL divergence=0.20488066971302032, Entropy=1.2003519535064697, training epoch=3, learning_rate=0.0003
+Policy training> Surrogate loss=-0.11107626557350159, KL divergence=0.20803110301494598, Entropy=1.2079232931137085, training epoch=4, learning_rate=0.0003
+Policy training> Surrogate loss=-0.11073269695043564, KL divergence=0.21451576054096222, Entropy=1.2127341032028198, training epoch=5, learning_rate=0.0003
+Policy training> Surrogate loss=-0.11603069305419922, KL divergence=0.2210262268781662, Entropy=1.1989175081253052, training epoch=6, learning_rate=0.0003
+Policy training> Surrogate loss=-0.11555227637290955, KL divergence=0.21911990642547607, Entropy=1.1952155828475952, training epoch=7, learning_rate=0.0003
