@@ -229,3 +229,30 @@ Result:
 
 ![result](./models/orifailsafe-r2018einvent-20241122-11/pics/result_chart.png)
 
+## orifailsafe-r2018einvent-20241122-12
+
+[Reward function](./models/orifailsafe-r2018einvent-20241122-12/reward_function.py)
+
+Env, action domain and hyperparameters:
+
+![env_action_hyperparameter](./models/orifailsafe-r2018einvent-20241122-12/pics/env_hyperparameters_actionspace.png)
+
+
+Result:
+
+![result](./models/orifailsafe-r2018einvent-20241122-12/pics/result_chart.png)
+
+## orifailsafe-r2018einvent-20241122-13
+
+[Reward function](./models/orifailsafe-r2018einvent-20241122-13/reward_function.py)
+
+Env, action domain and hyperparameters:
+
+![env_action_hyperparameter](./models/orifailsafe-r2018einvent-20241122-13/pics/env_hyperparameters_actionspace.png)
+
+
+Result:
+
+![result](./models/orifailsafe-r2018einvent-20241122-13/pics/result_chart.png)
+
+![time](./models/orifailsafe-r2018einvent-20241122-13/pics/result_time.png)
