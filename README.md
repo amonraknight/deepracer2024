@@ -256,3 +256,87 @@ Result:
 ![result](./models/orifailsafe-r2018einvent-20241122-13/pics/result_chart.png)
 
 ![time](./models/orifailsafe-r2018einvent-20241122-13/pics/result_time.png)
+
+
+## orifailsafe-r2018einvent-20241122-14
+
+[Reward function](./models/orifailsafe-r2018einvent-20241122-14/reward_function.py)
+
+Env, action domain and hyperparameters:
+
+![env_action_hyperparameter](./models/orifailsafe-r2018einvent-20241122-14/pics/env_hyperparameters_actionspace.png)
+
+
+Result:
+
+![result](./models/orifailsafe-r2018einvent-20241122-14/pics/result_chart.png)
+
+
+## orifailsafe-r2018einvent-20241122-15-2
+
+[Reward function](./models/orifailsafe-r2018einvent-20241122-15-2/reward_function.py)
+
+Env, action domain and hyperparameters:
+
+![env_action_hyperparameter](./models/orifailsafe-r2018einvent-20241122-15-2/pics/env_hyperparameters_actionspace.png)
+
+
+Result:
+
+![result](./models/orifailsafe-r2018einvent-20241122-15-2/pics/result_chart.png)
+
+
+## orifailsafe-r2018einvent-20241122-16
+
+[Reward function](./models/orifailsafe-r2018einvent-20241122-16/reward_function.py)
+
+Env, action domain and hyperparameters:
+
+![env_action_hyperparameter](./models/orifailsafe-r2018einvent-20241122-16/pics/env_hyperparameters_actionspace.png)
+
+
+Result:
+
+![result](./models/orifailsafe-r2018einvent-20241122-16/pics/result_chart.png)
+
+
+## orifailsafe-r2018einvent-20241122-17-2
+
+[Reward function](./models/orifailsafe-r2018einvent-20241122-17-2/reward_function.py)
+
+Env, action domain and hyperparameters:
+
+![env_action_hyperparameter](./models/orifailsafe-r2018einvent-20241122-17-2/pics/env_hyperparameters_actionspace.png)
+
+
+Result:
+
+![result](./models/orifailsafe-r2018einvent-20241122-17-2/pics/result_chart.png)
+
+
+## orifailsafe-r2018einvent-20241122-18
+
+[Reward function](./models/orifailsafe-r2018einvent-20241122-18/reward_function.py)
+
+Env, action domain and hyperparameters:
+
+![env_action_hyperparameter](./models/orifailsafe-r2018einvent-20241122-18/pics/env_hyperparameters_actionspace.png)
+
+
+Result:
+
+![result](./models/orifailsafe-r2018einvent-20241122-18/pics/result_chart.png)
+
+
+## orifailsafe-r2018einvent-20241122-19
+
+[Reward function](./models/orifailsafe-r2018einvent-20241122-19/reward_function.py)
+
+Env, action domain and hyperparameters:
+
+![env_action_hyperparameter](./models/orifailsafe-r2018einvent-20241122-19/pics/env_hyperparameters_actionspace.png)
+
+
+Result:
+
+![result](./models/orifailsafe-r2018einvent-20241122-19/pics/result_chart.png)
